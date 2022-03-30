@@ -8,7 +8,9 @@ srcDir        = "src"
 installExt    = @["nim"]
 bin           = @["gimg"]
 
+binDir = "build"
 
 # Dependencies
 
 requires "nim >= 1.7.1"
+requires "scraper"
