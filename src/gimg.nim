@@ -1,1 +1,2 @@
-from ./gimgpkg import 
+import ./gimgpkg/base
+export base
