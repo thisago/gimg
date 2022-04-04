@@ -52,7 +52,8 @@ Here is an sample of returned object in json
 ## TODO
 
 - [ ] Add tests
-- [ ] Improove readme
+- [ ] Add the url creation parameters to result object
+- [ ] Improve readme
 
 ## License
 

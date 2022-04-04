@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.0"
+version       = "1.1.0"
 author        = "Luciano Lorenzo"
 description   = "Google Images scraper lib and CLI"
 license       = "MIT"
