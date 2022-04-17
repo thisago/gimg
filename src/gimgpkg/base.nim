@@ -83,7 +83,6 @@ import std/asyncdispatch
 from std/httpclient import newAsyncHttpClient, close, getContent, newHttpHeaders
 from std/json import JsonNode, parseJson, items, `{}`, getStr, kind, JNull,
                                getInt
-from std/strutils import find
 
 type
   ImagesResult* = ref object
@@ -154,7 +153,7 @@ from pkg/useragent import mozilla
 
 proc searchImages*(
   search: string;
-  specifications: seq[string] = @[];
+  specifications: openArray[string] = @[];
   size = ImageSize.Any;
   color = ColorSpec (ImageColor.Any, "");
   imageType = ImageType.Any;
