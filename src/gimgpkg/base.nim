@@ -1,6 +1,6 @@
 from std/uri import encodeQuery, parseUri, `$`
 from std/strformat import fmt
-from std/strutils import join
+from std/strutils import join, find
 
 type
   ImageSize* {.pure.} = enum
@@ -153,7 +153,7 @@ from pkg/useragent import mozilla
 
 proc searchImages*(
   search: string;
-  specifications: openArray[string] = @[];
+  specifications: openArray[string] = [];
   size = ImageSize.Any;
   color = ColorSpec (ImageColor.Any, "");
   imageType = ImageType.Any;

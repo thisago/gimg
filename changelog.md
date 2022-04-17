@@ -3,6 +3,7 @@
 ## Version 1.2.1 (2022/04/17)
 
 - Specs allow `openArray` instead just `seq`s
+- Fixed missing import
 
 ---
 
