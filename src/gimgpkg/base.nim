@@ -153,7 +153,7 @@ from pkg/useragent import mozilla
 
 proc searchImages*(
   search: string;
-  specifications: openArray[string] = [];
+  specifications: seq[string] = @[];
   size = ImageSize.Any;
   color = ColorSpec (ImageColor.Any, "");
   imageType = ImageType.Any;
