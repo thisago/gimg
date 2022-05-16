@@ -2,9 +2,7 @@ from std/uri import encodeQuery, parseUri, `$`
 from std/strformat import fmt
 from std/strutils import join, find
 
-type
-  ImageSize* {.pure.} = enum
-    Any, Large, Medium, Icon
+import gimgpkg/types
 
 proc `$`*(s: ImageSize): string =
   result = "isz:"
@@ -13,13 +11,6 @@ proc `$`*(s: ImageSize): string =
   of ImageSize.Large: result.add 'l'
   of ImageSize.Medium: result.add 'm'
   of ImageSize.Icon: result.add 'i'
-
-type
-  ImageColor* {.pure.} = enum
-    Any, Gray, Transparent, Specific
-  ColorSpec = tuple
-    kind: ImageColor
-    name: string
 
 proc getColor*(s: ImageColor; colorName = ""): string =
   var parsed: tuple[ic, isc: string]
@@ -39,10 +30,6 @@ proc getColor*(s: ImageColor; colorName = ""): string =
     res.add fmt"isc:{parsed.isc}"
 
   result = res.join ","
-
-type
-  ImageType* {.pure.} = enum
-    Any, Clipart, LineDrawing, Gif
 
 proc `$`*(s: ImageType): string =
   result = "itp:"
@@ -83,24 +70,6 @@ import std/asyncdispatch
 from std/httpclient import newAsyncHttpClient, close, getContent, newHttpHeaders
 from std/json import JsonNode, parseJson, items, `{}`, getStr, kind, JNull,
                                getInt
-
-type
-  ImagesResult* = ref object
-    specifications*: seq[string]
-    suggestedSpecifications*: seq[SuggestedSpecification]
-    images*: seq[ImageResult]
-  SuggestedSpecification* = object
-    name*, icon*: string
-  ImageResult* = object
-    title*: string
-    thumbnail*, original*: ImageImg
-    site*: string
-    credit*, author*, copyright*: string
-    description*: string
-  ImageImg* = object
-    src*: string
-    width*, height*: int
-
 
 proc getJsonData(html: string): JsonNode =
   const startStr = "AF_initDataCallback({key: 'ds:1', hash: '2', data:"
