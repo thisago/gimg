@@ -1,4 +1,3 @@
-
 type
   ImageSize* {.pure.} = enum
     Any, Large, Medium, Icon
@@ -13,7 +12,6 @@ type
 type
   ImageType* {.pure.} = enum
     Any, Clipart, LineDrawing, Gif
-
 
 type
   ImagesResult* = ref object
