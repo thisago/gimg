@@ -1,7 +1,7 @@
 # Changelog
 ## Version 1.2.2 (2022/05/20)
 
-- Drecreased minimun Nim version to 1.6.4
+- Drecreased minimum Nim version to 1.6.4
 
 ---
 
