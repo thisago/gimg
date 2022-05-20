@@ -1,6 +1,6 @@
 # Package
 
-version       = "1.1.1"
+version       = "1.2.2"
 author        = "Luciano Lorenzo"
 description   = "Google Images scraper lib and CLI"
 license       = "MIT"
@@ -12,5 +12,5 @@ binDir = "build"
 
 # Dependencies
 
-requires "nim >= 1.7.1"
+requires "nim >= 1.6.4"
 requires "useragent"
