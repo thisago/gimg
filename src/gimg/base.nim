@@ -2,7 +2,7 @@ from std/uri import encodeQuery, parseUri, `$`
 from std/strformat import fmt
 from std/strutils import join, find
 
-import gimgpkg/types
+import gimg/types
 
 proc `$`*(s: ImageSize): string =
   result = "isz:"

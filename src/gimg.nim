@@ -1,4 +1,4 @@
-import ./gimgpkg/[
+import ./gimg/[
   base,
   types
 ]
