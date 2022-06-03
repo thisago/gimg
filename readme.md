@@ -4,6 +4,8 @@ Google Images searcher
 
 ## Features
 
+- [ ] CLI
+
 ### Search
 
 - [x] Specifications filtering
@@ -13,6 +15,7 @@ Google Images searcher
   - [x] Type
   - [ ] Time
   - [ ] Usage Rights
+
 
 ### Data extracted
 
