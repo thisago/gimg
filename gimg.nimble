@@ -1,8 +1,8 @@
 # Package
 
 version       = "1.2.2"
-author        = "Luciano Lorenzo"
-description   = "Google Images scraper lib and CLI"
+author        = "Thiago Navarro"
+description   = "Google Images scraper lib"
 license       = "MIT"
 srcDir        = "src"
 installExt    = @["nim"]
