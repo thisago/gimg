@@ -5,6 +5,8 @@ from std/sequtils import toSeq
 
 import gimg/types
 
+import json
+
 proc `$`*(s: ImageSize): string =
   result = "isz:"
   case s:
@@ -70,7 +72,7 @@ func buildUrl(
 import std/asyncdispatch
 from std/httpclient import newAsyncHttpClient, close, getContent, newHttpHeaders
 from std/json import JsonNode, parseJson, items, `{}`, getStr, kind, JNull,
-                               getInt, keys
+                               getInt
 
 proc getJsonData(html: string): JsonNode =
   const startStr = "AF_initDataCallback({key: 'ds:1', hash: '2', data:"

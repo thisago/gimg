@@ -1,7 +1,12 @@
 # Changelog
+
+## Version 1.3.0 (04/07/2023)
+
+- Fixed extraction, now working again
+
 ## Version 1.2.2 (2022/05/20)
 
-- Drecreased minimun Nim version to 1.6.4
+- Decreased minimum Nim version to 1.6.4
 
 ---
 
