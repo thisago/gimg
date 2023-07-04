@@ -96,11 +96,14 @@ proc extractData(data: JsonNode): ImagesResult =
       let descData = img{25}{"2003"}
       image.title = descData{3}.getStr
       image.site = descData{2}.getStr
-      let creditData = descData{18}
-      image.credit = creditData{1, 0}.getStr
-      image.author = descData{12}.getStr
-      image.copyright = creditData{0}.getStr
       image.description = descData{3}.getStr
+      try:
+        let creditData = descData{18}
+        image.credit = creditData{1, 0}.getStr
+        image.author = descData{12}.getStr
+        image.copyright = creditData{0}.getStr
+      except:
+        discard
     block thumb:
       let thumbData = img{2}
       image.thumbnail.src = thumbData{0}.getStr
@@ -151,7 +154,7 @@ when isMainModule:
     page = 3
   )
 
-  echo waitFor(searchImages("ball")).toJson.pretty
+  echo waitFor(searchImages("corn cake", @["cake"])).toJson.pretty
   # for img in waitFor(searchImages("ball")).images:
   #   echo img.thumbnail
   #   echo img.original
